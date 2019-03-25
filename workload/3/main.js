@@ -75,3 +75,13 @@ console.log('The value of levelUp:', levelUp);
 console.log('The value of powerLevel:', powerLevel); 
 console.log('The value of multiplyMe:', multiplyMe); 
 console.log('The value of quarterMe:', quarterMe);
+
+let favoriteAnimal=' Lion'
+console.log('My favorite Animal:' +favoriteAnimal)
+
+let myName = 'Nico';
+let myCity = 'San Fran';
+
+console.log(`My name is ${myName}. My favorite city is ${myCity}.`)
+
+
