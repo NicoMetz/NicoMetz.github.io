@@ -21,8 +21,8 @@
     <div class="author"
 <img src="images/user.JPG" alt="User" height="100" width="100">   
       <address>
-            <a href="mailto:Nicolas.Metz@student.uibk.ac.at" target="_blank">E-Mail</a>
-            <a href="http://www.github.com/nicometz" rel="noopener" target="_blank">Find me on GitHub</a>
+            <a href="mailto:Nicolas.Metz@student.uibk.ac.at" target="_blank"> &#xf044; E-Mail</a>
+            <a href="http://www.github.com/nicometz" rel="noopener" target="_blank"> &#xf022; Find me on GitHub</a>
     </address>
     </div>
 
