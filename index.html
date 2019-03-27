@@ -3,91 +3,84 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Neuseelandreise - Haast</title>
+    <title>Neuseelandreise - Sandfly Bay </title><!-- TODO:Titel der Etappe -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cairo|PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script defer src="main.js"></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+
 </head>
-    
+
 <body>
     <header>
-        <h3>Aotearoa</h3>
+        <h3>Aoteroa</h3>
         <h4>Land der langen weißen Wolke</h4>
-        <h2>Haast</h2>
-
+        <!-- TODO: eine Überschrift 2 mit dem Titel der Etappe -->
+        <h2>Sandfly Bay</h2>
     </header>
-
-    <div class="author"
-<img src="images/user.JPG" alt="User" height="100" width="100">   
-      <address>
-            <a href="mailto:Nicolas.Metz@student.uibk.ac.at" target="_blank">E-Mail</a>
-            <a href="http://www.github.com/nicometz" rel="noopener" target="_blank">Find me on GitHub</a>
-    </address>
-    </div>
+        <div class="author">
+          <img src="images/camel-1627701_640.jpg" alt="Der Author, ein Feschack vor dem Herren">
+          <p><address><a href="mailto:johannes.koeck@student.uibk.ac.at">Mail</a>
+          <a href="https://github.com/hannesklaus1/hannesklaus1.github.io">Github</a> </address></p>
+        </div>
+    <!-- TODO: ein div-Element mit der Klasse "author" -->
+        <!-- TODO: ein User-(Symbol)Bild mit 100x100 Pixel im Format JPG mit dem Namen user.jpg in einem Unterordner images/ -->
+        <!-- TODO: ein address-Element mit zwei Links -->
+            <!-- TODO: ein Link auf die eigene E-Mailadresse mit dem eigenen Namen-->
+            <!-- TODO: ein Link auf den eigenen github.com Account -->
 
     <hr />
 
     <main>
-       <h1>Haast - untamed wilderness & world heritage site</h1>
-       <p>Haast is an area in the <a title="Westland District" href="https://en.wikipedia.org/wiki/Westland_District">Westland District</a> territorial authority on the <a title="West Coast, New Zealand" href="https://en.wikipedia.org/wiki/West_Coast,_New_Zealand">West Coast</a> of New Zealand's <a title="South Island" href="https://en.wikipedia.org/wiki/South_Island">South Island</a>. The Haast region covers over 2,500 square kilometres (970 sq mi).<sup id="cite_ref-1" class="reference"><a href="https://en.wikipedia.org/wiki/Haast,_New_Zealand#cite_note-1">[1]</a></sup>
+      <h1>Sandfly Bay</h1>
+      <p>Sandfly Bay - The Bay of Sandflies Sandfly Bay is a sandy bay with large dunes, located on the eastern side of the Otago Peninsula, New Zealand, 15 km east of central Dunedin. The bay is accessed from Seal Point Road or a walking track from Sandymount.
+      Quelle: <a href="https://en.wikipedia.org/wiki/Sandfly_Bay">Wiki</a></p>
+      <h2>Sandflies</h2>
+      <figure>
+        <img src="images/attraction.jpg" alt="A beautiful specimen of a nasty Sandfly">
+          <figcaption> <i class="fas fa-camera"> </i><em>Sandfly</em> <a href="https://pixabay.com/photos/mosquito-biting-female-parasite-542156/">Quelle:Pixabay</a></figcaption>
+      </figure>
+      <p>Sandfly (or sand fly) is a colloquial name for any species or genus of flying, biting, blood-sucking dipteran (fly) encountered in sandy areas. In the United States, sandfly may refer to certain horse flies that are also known as "greenheads" (family Tabanidae), or to members of the family Ceratopogonidae, also known in Florida and elsewhere as a sand gnat, sandflea, granny nipper, chitra, punkie, or punky. Outside the United States, sandfly may refer to members of the subfamily Phlebotominae within the Psychodidae. Biting midges (Ceratopogonidae) are sometimes called sand flies or no-see-ums (no-see-em, noseeum). New Zealand sandflies are in the genus Austrosimulium, a type of black fly.<a href="https://en.wikipedia.org/wiki/Sandfly">Wiki</a></p>
+        <!-- TODO: eine Überschrift 1 mit dem Titel der Etappe und einem kurzen "Teaser" -->
+        <!-- TODO: ein Absatz mit einem Einführungstext zur Etappe aus der Wikipedia plus einem Link auf die Wikipedia-Seite in der Form "(Quelle: Wikipedia)", das Wort "Wikipedia" als Link -->
 
-The region is named after <a title="Julius von Haast" href="https://en.wikipedia.org/wiki/Julius_von_Haast">Julius von Haast</a>, a <a title="Kingdom of Prussia" href="https://en.wikipedia.org/wiki/Kingdom_of_Prussia">Prussian</a>-born geologist instrumental in the early geological surveys of New Zealand.
-
-The <a title="2013 New Zealand census" href="https://en.wikipedia.org/wiki/2013_New_Zealand_census">2013 census</a> recorded a population of 240 for the Haast statistical area, a decrease of 60 from the 2006 census.<sup id="cite_ref-2" class="reference"><a href="https://en.wikipedia.org/wiki/Haast,_New_Zealand#cite_note-2">[2]</a></sup> The majority of this population is located in three communities: the Haast township, Haast Junction, and Haast Beach.
-
-The main economic activities in the Haast region are farming, fishing and tourism.
-
-<a title="Lake Moeraki" href="https://en.wikipedia.org/wiki/Lake_Moeraki">Lake Moeraki</a> is 30 kilometres (19 mi) to the northeast, and the <a title="Haast Pass" href="https://en.wikipedia.org/wiki/Haast_Pass">Haast Pass</a> is 63 kilometres (39 mi) to the southeast by road. <a title="New Zealand State Highway 6" href="https://en.wikipedia.org/wiki/New_Zealand_State_Highway_6">State Highway 6</a> passes through Haast Junction and just to the east of Haast township. The settlement of Okuru is located on the coast 12 kilometres (7.5 mi) south-west of Haast.<sup id="cite_ref-3" class="reference"><a href="https://en.wikipedia.org/wiki/Haast,_New_Zealand#cite_note-3">[3]</a></sup><sup id="cite_ref-4" class="reference"><a href="https://en.wikipedia.org/wiki/Haast,_New_Zealand#cite_note-4">[4]</a></sup>
-
-The rarest subspecies of <a title="Kiwi" href="https://en.wikipedia.org/wiki/Kiwi">kiwi</a>, the Haast <a class="mw-redirect" title="Tokoeka" href="https://en.wikipedia.org/wiki/Tokoeka">tokoeka</a>, is only found in the mountains of the Haast region.
-
-(Quelle: <a href="https://de.wikipedia.org/wiki/Haast_(Neuseeland)">Wikipedia</a>)
-</p>
-
-       <h2>Haast River</h2>
+        <!-- TODO: eine Überschrift 2 einer Sehenswürdigkeit der Etappe-->
         <!-- TODO: eine vollständige Abbildung mit Bild im JPG-Format und kursiver Bildüberschrift für diese Sehenswürdigkeit. Das Bild soll attraction.jpg heißen, maximal 900 Pixel breit oder hoch sein und im Ordner images/ liegen. Das Bild soll von https://commons.wikimedia.org/ oder https://pixabay.com/ stammen und eine Public Domain, oder CC BY-SA Lizenz besitzen. -->
+        <!-- TODO: ein Absatz mit der Beschreibung der Sehenswürdigkeit aus der Wikipedia plus einem Link auf die Wikipedia-Seite in der Form "(Quelle: Wikipedia)", das Wort "Wikipedia" als Link -->
 
-       <p>The Haast River has its terminus on the West Coast of the South Island of New Zealand.
-The Haast River drains the western watershed of the Haast Pass. It is 100 kilometres in length, and enters the Tasman Sea near Haast township. The river's main tributary is the Landsborough River.
+        <h3>Übersichtskarte</h3>
+        <div id="map" data-lat="-45.896031" data-lng="170.647314" data-title="Sandfly Bay">
 
-The grassy flats on the lower reaches are grazed by cattle by the local farmers. Tourism operators offer jetboat tours on the river.
-
-The river often has glacial silt in suspension in the water from glaciers in the Southern Alps. The majority of the surrounding land is publicly owned and administered by the Department of Conservation. It is set within the Te Wahipounamu World Heritage site.
-
-
-The 737m single-lane bridge over the Haast River
-State Highway 6 follows virtually the complete length of the river, with a bridge near the coast, just after the turnoff to the Haast township. At 737 metres (2,418 ft) it is the longest one-lane road bridge in New Zealand, and the 7th longest New Zealand bridge overall.[1]
-
-The river is named after Julius von Haast.
-
-(Quelle: <a href="https://de.wikipedia.org/wiki/Haast_river">Wikipedia</a>)
-</p>
-        <h3>   
-    font_family: helvetica;
-    Übersichtskarte</h3>
-        <div 
-        id="map"  
-        data-title="Haast River"
-        data-lat="-43.83333" 
-        data-long="169.0333332">
+        </div>
+        <!-- TODO: ein div-Element mit dem id-Attribut "map" und drei weiteren Attributen data-lat, data-lng und data-title. Die Koordinaten von data-lat und data-lng sind als Dezimalgrad mit einem "." als Komma zu schreiben und aus der Wikipedia zu entnehmen. Das data-title Attribut enthält einen Titel für die oben verwendete Sehenswürdigkeit
+        -->
 
         <h3>Links</h3>
         <ul>
- 	    <li><a href="https://westcoast.co.nz/plan-your-trip/haast-township/">Westcoast Tourism</a></li>
-    	<li><a href="https://de.wikivoyage.org/wiki/Haast">WikiVoyage</a></li>
-    	<li><a href="http://www.haastriver.co.nz/">Jetboats Haast River</a></li>
-    	<li><a href="https://www.doc.govt.nz/visitorcentres">Department of Conservation - Visitor Center</a></li>
+          <li><a href="https://www.weltwunderer.de/sandflies-der-fluch-des-campers/">Sandfliegen der Fluch der Camper</a></li>
+          <li><a href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/otago-peninsula-area/things-to-do/sandfly-bay-track/">Walk the Sandfly Bay</a></li>
+          <li><a href="https://www.passengeronearth.com/otago-peninsula-taiaroa-head-sandfly-beach-suedinsel-neuseeland/">Weitere Infos</a></li>
+          <li><a href="https://www.revolvy.com/topic/Sandfly%20Bay&item_type=topic">Infos</a></li>
         </ul>
+        <!-- TODO: 4 Links zu Seiten im Netz die zur Etappe/Sehenswürdigkeit passen als ungeordnete Liste -->
 
     </main>
 
     <hr />
 
     <footer>
-      <nav>
-      <a href="https://alexhoefner.github.io/nz/index.html"> &#10229 Vorheriger Stop</a> | 
-      <a href="https://susannehentschel.github.io/nz/index.html"> Nächster Stop &#10230 </a>
-      </nav>    
+      <nav class="back">
+        <a href="https://larstimo.github.io/nz/index.html"><i class="fas fa-arrow-circle-left"></i> Etappe 6</a> </nav>
+        <nav class="next">
+        <a href="https://ludwighagelstein.github.io/nz/index.html"> Etappe 8 <i class="fas fa-arrow-circle-right"></i> </a></nav>
+
+        <!-- TODO: ein nav-Element mit zwei Links auf die vorherige Etappe und die nächste Etappe mit den Klassen "back" und "next" sowie den Link-Texten "vorhergehender Stop" und "nächster Stop". Die Links verweisen auf die entsprechenden Etappen in der Form https://username.github.io/nz/index.html -->
     </footer>
 
 </body>
