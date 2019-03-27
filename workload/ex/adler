@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Der Adlerweg - Etappe 08</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+    
+<body>
+    <header>
+        <h3>Etappe 08: Erfurter Hütte - Lamsenjoch</h3>
+        <h4>Im Falzthurntlal durchs Karwendel</h4>
+        <h2>Ka</h2>
+
+    </header>
+
+    <div class="author"
+<img src="images/user.JPG" alt="User" height="100" width="100">   
+      <address>
+            <a href="mailto:Nicolas.Metz@student.uibk.ac.at" target="_blank">E-Mail</a>
+            <a href="http://www.github.com/nicometz" rel="noopener" target="_blank">Find me on GitHub</a>
+    </address>
+    </div>
+
+    <hr />
+
+    <main>
+       <h1>Haast - untamed wilderness & world heritage site</h1>
+       <p>Haast is an area in the <a title="Westland District" href="https://en.wikipedia.org/wiki/Westland_District">Westland District</a> territorial authority on the <a title="West Coast, New Zealand" href="https://en.wikipedia.org/wiki/West_Coast,_New_Zealand">West Coast</a> of New Zealand's <a title="South Island" href="https://en.wikipedia.org/wiki/South_Island">South Island</a>. The Haast region covers over 2,500 square kilometres (970 sq mi).<sup id="cite_ref-1" class="reference"><a href="https://en.wikipedia.org/wiki/Haast,_New_Zealand#cite_note-1">[1]</a></sup>
+
+The region is named after <a title="Julius von Haast" href="https://en.wikipedia.org/wiki/Julius_von_Haast">Julius von Haast</a>, a <a title="Kingdom of Prussia" href="https://en.wikipedia.org/wiki/Kingdom_of_Prussia">Prussian</a>-born geologist instrumental in the early geological surveys of New Zealand.
+
+The <a title="2013 New Zealand census" href="https://en.wikipedia.org/wiki/2013_New_Zealand_census">2013 census</a> recorded a population of 240 for the Haast statistical area, a decrease of 60 from the 2006 census.<sup id="cite_ref-2" class="reference"><a href="https://en.wikipedia.org/wiki/Haast,_New_Zealand#cite_note-2">[2]</a></sup> The majority of this population is located in three communities: the Haast township, Haast Junction, and Haast Beach.
+
+The main economic activities in the Haast region are farming, fishing and tourism.
+
+<a title="Lake Moeraki" href="https://en.wikipedia.org/wiki/Lake_Moeraki">Lake Moeraki</a> is 30 kilometres (19 mi) to the northeast, and the <a title="Haast Pass" href="https://en.wikipedia.org/wiki/Haast_Pass">Haast Pass</a> is 63 kilometres (39 mi) to the southeast by road. <a title="New Zealand State Highway 6" href="https://en.wikipedia.org/wiki/New_Zealand_State_Highway_6">State Highway 6</a> passes through Haast Junction and just to the east of Haast township. The settlement of Okuru is located on the coast 12 kilometres (7.5 mi) south-west of Haast.<sup id="cite_ref-3" class="reference"><a href="https://en.wikipedia.org/wiki/Haast,_New_Zealand#cite_note-3">[3]</a></sup><sup id="cite_ref-4" class="reference"><a href="https://en.wikipedia.org/wiki/Haast,_New_Zealand#cite_note-4">[4]</a></sup>
+
+The rarest subspecies of <a title="Kiwi" href="https://en.wikipedia.org/wiki/Kiwi">kiwi</a>, the Haast <a class="mw-redirect" title="Tokoeka" href="https://en.wikipedia.org/wiki/Tokoeka">tokoeka</a>, is only found in the mountains of the Haast region.
+
+(Quelle: <a href="https://de.wikipedia.org/wiki/Haast_(Neuseeland)">Wikipedia</a>)
+</p>
+
+       <h2>Haast River</h2>
+        <!-- TODO: eine vollständige Abbildung mit Bild im JPG-Format und kursiver Bildüberschrift für diese Sehenswürdigkeit. Das Bild soll attraction.jpg heißen, maximal 900 Pixel breit oder hoch sein und im Ordner images/ liegen. Das Bild soll von https://commons.wikimedia.org/ oder https://pixabay.com/ stammen und eine Public Domain, oder CC BY-SA Lizenz besitzen. -->
+
+       <p>The Haast River has its terminus on the West Coast of the South Island of New Zealand.
+The Haast River drains the western watershed of the Haast Pass. It is 100 kilometres in length, and enters the Tasman Sea near Haast township. The river's main tributary is the Landsborough River.
+
+The grassy flats on the lower reaches are grazed by cattle by the local farmers. Tourism operators offer jetboat tours on the river.
+
+The river often has glacial silt in suspension in the water from glaciers in the Southern Alps. The majority of the surrounding land is publicly owned and administered by the Department of Conservation. It is set within the Te Wahipounamu World Heritage site.
+
+
+The 737m single-lane bridge over the Haast River
+State Highway 6 follows virtually the complete length of the river, with a bridge near the coast, just after the turnoff to the Haast township. At 737 metres (2,418 ft) it is the longest one-lane road bridge in New Zealand, and the 7th longest New Zealand bridge overall.[1]
+
+The river is named after Julius von Haast.
+
+(Quelle: <a href="https://de.wikipedia.org/wiki/Haast_river">Wikipedia</a>)
+</p>
+        <h3>   
+    font_family: helvetica;
+    Übersichtskarte</h3>
+        <div 
+        id="map"  
+        data-title="Haast River"
+        data-lat="-43.83333" 
+        data-long="169.0333332">
+
+        <h3>Links</h3>
+        <ul>
+ 	    <li><a href="https://westcoast.co.nz/plan-your-trip/haast-township/">Westcoast Tourism</a></li>
+    	<li><a href="https://de.wikivoyage.org/wiki/Haast">WikiVoyage</a></li>
+    	<li><a href="http://www.haastriver.co.nz/">Jetboats Haast River</a></li>
+    	<li><a href="https://www.doc.govt.nz/visitorcentres">Department of Conservation - Visitor Center</a></li>
+        </ul>
+
+    </main>
+
+    <hr />
+
+    <footer>
+      <nav>
+      <a href="https://alexhoefner.github.io/nz/index.html"> &#10229 Vorheriger Stop</a> | 
+      <a href="https://susannehentschel.github.io/nz/index.html"> Nächster Stop &#10230 </a>
+      </nav>    
+    </footer>
+
+</body>
+
+</html>
