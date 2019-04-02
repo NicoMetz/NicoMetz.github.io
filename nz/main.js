@@ -29,17 +29,17 @@ let pin = L.marker(
 pin.bindPopup(titel).openPopup();
 
 
-let blickeGruppe=L.featureGroup().addTo(karte);
+let nzGruppe=L.featureGroup().addTo(karte);
 
-for (let blick of ADLERBLICKE) {
-  let blickpin = L.marker(
-    [blick.lat, blick.lng]
-  ).addTo(blickeGruppe);
-  blickpin.bindPopup(
-    `<h1> Standort ${blick.standort}</h1>
-        <p> Höhe: ${blick.seehoehe}<p>
-        <em>Kunde: ${blick.kunde}<p>`
+for (let nz of NSHAAST) {
+  let nzpin = L.marker(
+    [nz.lat, nz.lng]
+  ).addTo(nzGruppe);
+  nzpin.bindPopup(
+    `<h1> Attraction ${nz.standort}</h1>
+        <p> Lattitude: ${nz.lat}<p>
+        <em>Lungitude: ${nz.lng}<p>`
   )
 };
-console.log(blickeGruppe.getBounds())
-karte.fitBounds(blickeGruppe.getBounds())
+console.log(nzGruppe.getBounds())
+karte.fitBounds(nzGruppe.getBounds())
