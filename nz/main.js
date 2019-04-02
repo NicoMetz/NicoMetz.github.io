@@ -11,3 +11,8 @@ karte.setView(
   [breite,laenge],10
 );
 L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png").addTo(karte);
+
+let pin = L.marker(
+  [breite,laenge]
+).addTo(map);
+pin.bindPopup(titel).openPopup();
