@@ -29,7 +29,7 @@ let pin = L.marker(
 pin.bindPopup(titel).openPopup();
 
 
-let blickeGruppe=L.featureGroup().addTo(karte);
+let blickeGruppe = L.featureGroup().addTo(karte);
 
 for (let blick of ADLERBLICKE) {
   let blickpin = L.marker(
