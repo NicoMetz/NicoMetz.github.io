@@ -27,6 +27,23 @@ geolandbasemap: L.tileLayer("https://{s}.wien.gv.at/basemap/geolandbasemap/norma
   subdomains:["maps","maps1","maps2","maps3", "maps4"],
   attribution: 'Datenquelle: <a href:="https://www.basemap.at"> basemap.at</a>'
 }),
+  
+  https://maps1.wien.gv.at/basemap/bmapoverlay/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png
+  
+  https://maps1.wien.gv.at/basemap/bmapgrau/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png
+  
+  https://maps1.wien.gv.at/basemap/bmaphidpi/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpeg
+  
+  https://maps1.wien.gv.at/basemap/bmaporthofoto30cm/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpeg
+  
+  https://maps1.wien.gv.at/basemap/bmapgelaende/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpeg
+  
+  https://maps1.wien.gv.at/basemap/bmapoberflaeche/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpeg
+  
+  
+  
+  
+  
 };
 
 kartenLayer.geolandbasemap.addTo(karte);
