@@ -23,20 +23,30 @@ const kartenLayer = {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
   }),
 
+  NZ_TOPO_50: L.tileLayer("https://{s}.data-cdn.linz.govt.nz/services;key=d64fa727f2214c36904e98c1970c6b8b/tiles/v4/layer=50767,style=auto/EPSG:3857/{z}/{x}/{y}.png", {
+    subdomains: ["tiles-a", "tiles-b", "tiles-c", "tiles-d"],
+    attribution: 'data.linz.govt.nz - Attribution 4.0 International (CC BY 4.0) '
+  }),
+
+  NZ_Arial: L.tileLayer("https://{s}.data-cdn.linz.govt.nz/services;key=d64fa727f2214c36904e98c1970c6b8b/tiles/v4/set=4702,style=auto/EPSG:3857/{z}/{x}/{y}.png", {
+    subdomains: ["tiles-a", "tiles-b", "tiles-c", "tiles-d"],
+    attribution: 'data.linz.govt.nz - Attribution 4.0 International (CC BY 4.0) '
+  }),
+
   stamen_toner: L.tileLayer("https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png", {
     subdomains: ["a", "b", "c"],
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+    attribution: 'Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
   }),
 
   stamen_relief: L.tileLayer("https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg", {
     subdomains: ["a", "b", "c"],
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+    attribution: 'Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under CC BY SA.'
   }),
 
   stamen_watercolor: L.tileLayer("https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg", {
     subdomains: ["a", "b", "c"],
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-  }),
+    attribution: 'Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under CC BY SA.'
+  })
 
 };
 
@@ -46,10 +56,13 @@ kartenLayer.bmaphidpi.addTo(karte);
 
 L.control.layers({
   "OpenStreetMap": kartenLayer.osm,
+  "NZ_TOPO_50": kartenLayer.NZ_TOPO_50,
+  "NZ_Arial": kartenLayer.NZ_Arial,
   "Stamen Toner": kartenLayer.stamen_toner,
   "Stamen Watercolor": kartenLayer.stamen_watercolor,
   "Stamen Relief": kartenLayer.stamen_relief
 }).addTo(karte)
+
 
 //Positionsmarker Hinzufügen
 let pin = L.marker(
