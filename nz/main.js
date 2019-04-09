@@ -50,7 +50,7 @@ const kartenLayer = {
 
 };
 
-kartenLayer.bmaphidpi.addTo(karte);
+kartenLayer.osm.addTo(karte);
 
 //Auswahlmenü hinzufügen
 
