@@ -63,7 +63,6 @@ L.control.layers({
   "Stamen Relief": kartenLayer.stamen_relief
 }).addTo(karte)
 
-
 //Positionsmarker Hinzufügen
 let pin = L.marker(
   [breite, laenge]
@@ -72,25 +71,12 @@ let pin = L.marker(
 //popup an Pin setzten
 pin.bindPopup(titel).openPopup();
 
-
-let mapGruppe = L.featureGroup().addTo(karte);
-
-for (let blick of SIGHTS) {
-  let blickpin = L.marker(
-    [blick.lat, blick.lng]
-  ).addTo(mapGruppe);
-  blickpin.bindPopup(
-    `<h1> Village ${blick.ort}</h1>`
-  )
-};
-console.log(mapGruppe.getBounds())
-karte.fitBounds(mapGruppe.getBounds())
-
-
+//Plugins Fullscreen
 karte.addControl(new L.Control.Fullscreen());
+//Plugin Hash shows Koordinaten
 var hash = new L.Hash(karte);
 var coords = new L.Control.Coordinates();
 coords.addTo(karte);
-karte.on('click', function (e) {
+karte.on('click', function(e) {
   coords.setCoordinates(e);
 });
