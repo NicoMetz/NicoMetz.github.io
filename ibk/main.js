@@ -97,3 +97,7 @@ karte.locate({
     setView: true,
     maxZoom: 16
 });
+
+karte.on("locationerror",function(event){
+    alert("Leider keinen Standort gefunden!")
+})
