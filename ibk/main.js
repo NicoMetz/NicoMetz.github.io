@@ -83,22 +83,19 @@ L.control.layers({
     "Stamen Relief": kartenLayer.stamen_relief
 }).addTo(karte)
 
-karte.on("locationfound", function (event) {
-    console.log(event)
-   // L.marker([event.latlng.lat, event.latlng.lng ]).addTo(karte)
-    L.circle([event.latlng.lat, event.latlng.lng], {
-        radius: event.accuracy/2
-    }).addTo(karte);
-    positionsMarker.setLatLng(event.LatLng)
-});
-let positionsMarker=L.marker([47,11]).addTo(karte);
+karte.setView(
+    [47.267222, 11.392778] 15);
 
-karte.locate({
-    setView: true,
-    maxZoom: 16,
-    watch: true
-});
+console.log(SPORTSTAETTEN);
 
-karte.on("locationerror",function(event){
-    alert("Leider keinen Standort gefunden!")
-})
+for (let staette of SPORTSTAETTEN) {
+    console.log(staette);
+
+    let staettepin = L.marker(
+        [staette.lat, staette.lng]
+    ).addTo(karte);
+    staettepin.bindPopup(
+        `<h1> Name: ${staette.name}</h1>
+        <p> Adresse: ${staette.adresse}<p>
+            <em>Art: ${staette.typ}<p>`)
+    };
