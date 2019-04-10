@@ -91,11 +91,14 @@ karte.on("locationfound", function (event) {
     L.circle([event.latlng.lat, event.latlng.lng], {
         radius: event.accuracy/2
     }).addTo(karte);
+    positionsMarker.setLatLng(event.LatLng)
 });
+let positionsMarker=L.marker([47,11]).addTo(karte);
 
 karte.locate({
     setView: true,
-    maxZoom: 16
+    maxZoom: 16,
+    watch: true
 });
 
 karte.on("locationerror",function(event){
