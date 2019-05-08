@@ -84,17 +84,23 @@ L.control.layers({
 }).addTo(karte)
 
 karte.setView(
-    [47.267222, 11.392778] 15);
+    [47.267222, 11.392778],15);
 
 console.log(SPORTSTAETTEN);
 
 for (let staette of SPORTSTAETTEN) {
     console.log(staette);
 
-    let staettepin = L.marker(
-        [staette.lat, staette.lng]
+    //Piktogramm definieren
+    let piktogramm = L.icon ({
+        iconUrl: `icons/icon_${staette.icon}_schwarz_auf_weiss_250px.png`,
+        iconSize: [40,40]
+    })
+    let positionsMarker = L.marker(
+        [staette.lat, staette.lng],
+        {icon: piktogramm}
     ).addTo(karte);
-    staettepin.bindPopup(
+    positionsMarker.bindPopup(
         `<h1> Name: ${staette.name}</h1>
         <p> Adresse: ${staette.adresse}<p>
             <em>Art: ${staette.typ}<p>`)
