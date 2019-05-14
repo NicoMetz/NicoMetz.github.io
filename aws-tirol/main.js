@@ -136,10 +136,45 @@ async function loadStations() {
 
     const temperaturLayer = L.featureGroup();
     const farbPalette = [
-        [0, "blue"],
-        [1, "yellow"],
-        [5, "orange"],
-        [10, "red"],
+        [-30, "#646664"],
+        [-28, "#8c8a8c"],
+        [-26, "#b4b2b4"],
+        [-24, "#cccecc"],
+        [-22, "#e4e6e4"],
+        [-20, "#772d76"],
+        [-18, "#b123b0"],
+        [-16, "#d219d1"],
+        [-14, "#f0f"],
+        [-12, "#ff94ff"],
+        [-10, "#3800d1"],
+        [-8, "#325afe"],
+        [-6, "#2695ff"],
+        [-4, "#00cdff"],
+        [-2, "#00fffe"],
+        [0, "#007800"],
+        [2, "#009d00"],
+        [4, "#00bc02"],
+        [6, "#00e200"],
+        [8, "#0f0"],
+        [10, "#fcff00"],
+        [12, "#fdf200"],
+        [14, "#fde100"],
+        [16, "#ffd100"],
+        [18, "#ffbd00"],
+        [20, "#ffad00"],
+        [22, "#ff9c00"],
+        [24, "#ff7800"],
+        [26, "red"],
+        [28, "#f30102"],
+        [30, "#d20000"],
+        [32, "#c10000"],
+        [34, "#b10000"],
+        [36, "#a10000"],
+        [38, "#900000"],
+        [40, "#770100"],
+        [42, "#5f0100"],
+        [44, "#460101"],
+        [46, "#2e0203"],
     ];
 
     L.geoJson(stations, {
@@ -154,9 +189,9 @@ async function loadStations() {
                     }
                 }
                 //let color = `blue`;
-               // if (feature.properties.LT > 0) {
-               //     color = `red`;
-               // }
+                // if (feature.properties.LT > 0) {
+                //     color = `red`;
+                // }
                 return L.marker(latlng, {
                     icon: L.divIcon({
                         html: `<div class="temperaturLabel" style= "background-color:${color}"> ${feature.properties.LT}</div>`
@@ -167,6 +202,44 @@ async function loadStations() {
     }).addTo(temperaturLayer);
     layerControl.addOverlay(temperaturLayer, "Temperatur");
     temperaturLayer.addTo(karte);
+
+
+    const humidLayer = L.featureGroup();
+    const farbpalette_h = [
+        [20,"#EEE"],
+        [40,"#DDD"],
+        [60,"#BBB"],
+        [80,"#9998DD"],
+        [100,"#7677E1"]
+    ];
+
+    L.geoJson(stations, {
+        pointToLayer: function (feature, latlng) {
+            let color;
+            if (feature.properties.RH) {
+                for (let i = 0; i < farbpalette_h.length; i++) {
+                    console.log(farbpalette_h[i], feature.properties.RH);
+                    if (feature.properties.RH < farbpalette_h[i][0]) {
+                        color = farbpalette_h[i][1];
+                        break;
+                    }
+                }
+
+
+                // if (feature.properties.LT > 0) {
+                //    color = `red`;
+                //}
+                return L.marker(latlng, {
+                    icon: L.divIcon({
+                        html: `<div class="temperatureLabel" style="background-color:${color}"> ${feature.properties.RH} </div>`
+                    })
+
+                });
+
+            }
+        }
+    }).addTo(humidLayer);
+    layerControl.addOverlay(humidLayer, "Relative Luftfeuchtigkeit");
 }
 //   console.log(AWS)
 
