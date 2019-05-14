@@ -25,3 +25,30 @@ text-shadow:
 -1px 1px o white,
 1px 1px o white,
 }
+
+.windLabel{
+    display: inline;
+font-size: 1.2em;
+font-weight:bold;
+padding: 0.3em;
+border: 1px solid gray;
+text-shadow: 
+-1px -1px o white,
+1px -1px o white,
+-1px 1px o white,
+1px 1px o white,
+}
+
+.feuchteLabel{
+    display: inline;
+font-size: 1.2em;
+font-weight:bold;
+color: white;
+padding: 0.3em;
+border: 1px solid gray;
+text-shadow: 
+-1px -1px o white,
+1px -1px o white,
+-1px 1px o white,
+1px 1px o white,
+}

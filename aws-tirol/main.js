@@ -206,11 +206,11 @@ async function loadStations() {
 
     const humidLayer = L.featureGroup();
     const farbpalette_h = [
-        [20,"#EEE"],
-        [40,"#DDD"],
-        [60,"#BBB"],
-        [80,"#9998DD"],
-        [100,"#7677E1"]
+        [20,"#2ECCFA"],
+        [40,"#2E9AFE"],
+        [60,"#2E64FE"],
+        [80,"#0000FF"],
+        [101,"#0404B4"]
     ];
 
     L.geoJson(stations, {
@@ -231,7 +231,7 @@ async function loadStations() {
                 //}
                 return L.marker(latlng, {
                     icon: L.divIcon({
-                        html: `<div class="temperatureLabel" style="background-color:${color}"> ${feature.properties.RH} </div>`
+                        html: `<div class="feuchteLabel" style="background-color:${color}"> ${feature.properties.RH} </div>`
                     })
 
                 });
