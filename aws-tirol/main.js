@@ -206,11 +206,11 @@ async function loadStations() {
 
     const humidLayer = L.featureGroup();
     const farbpalette_h = [
-        [20,"#2ECCFA"],
-        [40,"#2E9AFE"],
-        [60,"#2E64FE"],
-        [80,"#0000FF"],
-        [101,"#0404B4"]
+        [20, "#2ECCFA"],
+        [40, "#2E9AFE"],
+        [60, "#2E64FE"],
+        [80, "#0000FF"],
+        [101, "#0404B4"]
     ];
 
     L.geoJson(stations, {
