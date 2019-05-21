@@ -84,4 +84,6 @@ const scale = L.control.scale({
 })
 karte.addControl(scale);
 
+
+
 // die Implementierung der Karte startet hier
