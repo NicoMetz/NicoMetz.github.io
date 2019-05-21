@@ -136,4 +136,13 @@ async function loadWege(wegeUrl) {
     }
     loadWege(wege);
 
+    new L.Control.MiniMap(
+        L.tileLayer("https://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png", {
+            subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
+        }), {
+            zoomLevelOffset: -4,
+            toggleDisplay: true
+        }
+    ).addTo(karte); 
+
 // die Implementierung der Karte startet hier

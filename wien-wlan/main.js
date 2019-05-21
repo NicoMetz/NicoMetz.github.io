@@ -69,6 +69,46 @@ karte.addControl(new L.Control.Fullscreen());
 
 karte.setView([48.208333, 16.373056], 12);
 
+function makeMaker(feature, latlng) {
+    const wifiicon = L.icon({
+        iconUrl: `http://www.data.wien.gv.at/icons/wlanwienatogd.svg`,
+        iconSize: [16, 16]
+    });
+    const marker = L.marker(latlng, {
+        icon: wifiicon
+    });
+
+    marker.bindPopup(`
+        <h3>${feature.properties.NAME}</h3>
+        <p>${feature.properties.ADRESSE}</p>
+        <hr>
+        <footer><a href="${feature.properties.WEITERE_INF}">Weblink</a></footer>
+        `);
+    return marker;
+}
+const url = `https://data.wien.gv.at/daten/geo?service=WFS&request=GetFeature&version=1.1.0&typeName=ogdwien:WLANWIENATOGD&srsName=EPSG:4326&outputFormat=json`
+
+async function loadSights(url) {
+    const clusterGruppe = L.markerClusterGroup();
+    const response = await fetch(url);
+    const sightsData = await response.json();
+    const geoJson = L.geoJson(sightsData, {
+        pointToLayer: makeMaker
+    });
+    clusterGruppe.addLayer(geoJson);
+    karte.addLayer(clusterGruppe);
+    layerControl.addOverlay(clusterGruppe, "WLAN Hotspots");
+
+    const suchFeld = new L.Control.Search({
+        layer: clusterGruppe,
+        propertyName: "NAME",
+        zoom: 17,
+        initial: false
+    });
+    karte.addControl(suchFeld);
+}
+loadSights(url);
+
 // https://github.com/Norkart/Leaflet-MiniMap
 new L.Control.MiniMap(
     L.tileLayer("https://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png", {
