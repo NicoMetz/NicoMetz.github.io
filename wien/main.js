@@ -90,11 +90,11 @@ function makeMaker(feature, latlng) {
 const url = `https://data.wien.gv.at/daten/geo?service=WFS&request=GetFeature&version=1.1.0&typeName=ogdwien:SPAZIERPUNKTOGD%20&srsName=EPSG:4326&outputFormat=json`
 
 
-function linienPopup(feature, layer){
-const popup=`
+function linienPopup(feature, layer) {
+    const popup = `
 <h3>${feature.properties.NAME}</h3>`
-layer.bindPopup(popup)
-return popup
+    layer.bindPopup(popup)
+    return popup
 
 }
 async function loadSights(url) {
@@ -118,6 +118,15 @@ async function loadSights(url) {
 }
 loadSights(url);
 
+new L.Control.MiniMap(
+    L.tileLayer("https://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png", {
+        subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
+    }), {
+        zoomLevelOffset: -4,
+        toggleDisplay: true
+    }
+).addTo(karte);
+
 const scale = L.control.scale({
     imperial: false
 })
@@ -133,16 +142,8 @@ async function loadWege(wegeUrl) {
 
     karte.addLayer(wegeJson);
     layerControl.addOverlay(wegeJson, "Spazierwege")
-    }
-    loadWege(wege);
+}
+loadWege(wege);
 
-    new L.Control.MiniMap(
-        L.tileLayer("https://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png", {
-            subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
-        }), {
-            zoomLevelOffset: -4,
-            toggleDisplay: true
-        }
-    ).addTo(karte); 
 
 // die Implementierung der Karte startet hier
