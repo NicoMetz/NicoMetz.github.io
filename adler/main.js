@@ -122,24 +122,50 @@ karte.on('click', function (e) {
 
 var gpx = 'AdlerwegEtappe08.gpx';
 new L.GPX(gpx, {
-  async: true,
-  marker_options:{
-    startIconUrl:'pin-icon-start.png',
-    endIconUrl:`pin-icon-end.png`,
-    shadowUrl:`pin-shadow.png`,
-  }
-}).on('loaded', function (e) {
-  karte.fitBounds(e.target.getBounds());
-}).on(`addline`, function (e) {
-  console.log(`line geladen`);
-  const controlElevation = L.control.elevation({
-    detachedView: true,
-    elevationDiv: "#elevation-div",
-  })
-  controlElevation.addTo(karte);
-  controlElevation.addData(e.line);
-  const gpxLine = e.line.getLatLngs();
-  console.log(gpxLine);
-for (let i = )
+    async: true,
+    marker_options: {
+      startIconUrl: 'pin-icon-start.png',
+      endIconUrl: `pin-icon-end.png`,
+      shadowUrl: `pin-shadow.png`,
+    }
+  }).on('loaded', function (e) {
+    karte.fitBounds(e.target.getBounds());
+  }).on(`addline`, function (e) {
+      console.log(`line geladen`);
+      const controlElevation = L.control.elevation({
+        detachedView: true,
+        elevationDiv: "#elevation-div",
+      })
+      controlElevation.addTo(karte);
+      controlElevation.addData(e.line);
+      const gpxLinie = e.line.getLatLngs();
+      console.log(gpxLinie);
+      for (let i = 1; i < gpxLinie.length; i += 1) {
+        let p1 = gpxLinie[i - 1];
+        let p2 = gpxLinie[i];
+        let dist = karte.distance(
+          [p1.lat, p1.lng],
+          [p2.lat, p2.lng]
+        );
+        let delta = (p2.meta.ele - p1.meta.ele);
+        let proz = (dist != 0 ? delta / dist * 100.0 : 0).toFixed(1);
+        console.log
+        let farbe =
+          proz >= 10 ? `#d73027` :
+          proz >= 6 ? '#fc8d59' :
+          proz >= 2 ? '#fee08b' :
+          proz >= 0 ? '#ffffbf' :
+          proz >= -6 ? '#d9ef8b' :
+          proz >= -10 ? '#91cf60' :
+          '#1a9850';
 
-}).addTo(karte);
+        L.polyline(
+          [
+            [p1.lat, p1.lng],
+            [p2.lat, p2.lng]
+          ], {
+            color: farbe,
+
+          }).addTo(karte)
+      }
+    })
