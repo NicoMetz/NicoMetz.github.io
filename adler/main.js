@@ -138,4 +138,8 @@ new L.GPX(gpx, {
   })
   controlElevation.addTo(karte);
   controlElevation.addData(e.line);
+  const gpxLine = e.line.getLatLngs();
+  console.log(gpxLine);
+for (let i = )
+
 }).addTo(karte);
