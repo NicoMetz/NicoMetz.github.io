@@ -19,10 +19,14 @@
   <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
     rel='stylesheet' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
+  <script src="https://unpkg.com/d3@4.13.0/build/d3.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.css" />
+  <script src="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.min.js"></script>
-    <link href="plugins/Control.Coordinates.css" rel="stylesheet">
-    <script src="plugins/Control.Coordinates.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.min.js"></script>
+  <link href="plugins/Control.Coordinates.css" rel="stylesheet">
+  <script src="plugins/Control.Coordinates.js"></script>
 
 </head>
 
@@ -128,6 +132,7 @@
     <div id="map" data-lat1="47.441667" data-lng1="11.76305" data-lat2="47.38" data-lng2="11.603617"
       data-title1="Erfurter Hütte" data-title2="Lamsenjochhütte"></div>
     </div>
+    <div id="elevation-div"></div>
     <!-- TODO: ein div-Element mit dem id-Attribut "map" und drei weiteren Attributen data-lat, data-lng und data-title. Die Koordinaten von data-lat und data-lng sind als Dezimalgrad mit einem "." als Komma zu schreiben und aus der Wikipedia zu entnehmen. Das data-title Attribut enthält einen Titel für die oben verwendete Sehenswürdigkeit
         -->
 

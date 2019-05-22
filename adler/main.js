@@ -11,10 +11,6 @@ console.log("breite:", breite, "länge:", laenge, "Titel:", titel);
 let karte = L.map("map");
 //console.log(karte);
 
-// auf Ausschnitt zoomen
-karte.setView(
-  [breite, laenge], 13
-);
 
 
 const kartenLayer = {
@@ -113,13 +109,27 @@ for (let blick of ADLERBLICKE) {
   )
 };
 console.log(blickeGruppe.getBounds())
-karte.fitBounds(blickeGruppe.getBounds())
+// karte.fitBounds(blickeGruppe.getBounds())
 
 
 karte.addControl(new L.Control.Fullscreen());
-var hash = new L.Hash(karte);
+// var hash = new L.Hash(karte);
 var coords=new L.Control.Coordinates();
 coords.addTo(karte);
 karte.on('click',function(e) {
   coords.setCoordinates(e);
 });
+
+var gpx = 'AdlerwegEtappe08.gpx'; 
+new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+  karte.fitBounds(e.target.getBounds());
+}).on(`addline`, function(e) {
+console.log(`line geladen`);
+const controlElevation = L.control.elevation({
+  detachedView: true,
+  elevationDiv: "#elevation-div",
+}).addTo(karte);
+}).addTo(karte);
+
+
+

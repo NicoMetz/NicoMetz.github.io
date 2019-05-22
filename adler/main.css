@@ -87,3 +87,8 @@ footer {
     width: auto;
   }
 }
+
+#elevation-div{
+  width: 90%;
+  height: 200px;
+}
