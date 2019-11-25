@@ -1,0 +1,14 @@
+<html>
+<body>
+<h2>
+<label>Email address: </label>
+<input type="email" name="EMAIL" required="" value="Your E-Mail address"/>
+</h2>
+<h3>
+<input type="submit" value="Sign up" />
+</h3>
+<br>
+<input name="AGREE_TO_TERMS" type="checkbox" value="1" required=""/> 
+<a href="www.domain.com/privacy" target="_blank">I have read and agree to the privacy policy</a>
+</body>
+</html>
